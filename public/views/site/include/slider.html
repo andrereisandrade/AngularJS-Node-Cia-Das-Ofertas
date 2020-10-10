@@ -1,0 +1,24 @@
+<div class="box-slider">
+    <div class="overlay">
+        <div class="slide">
+            <slick ng-if="offersSlider" slides-to-show="1" slides-to-scroll="1" dots="true" autoplay="true" arrows="false">
+                <div class="section" ng-repeat="offer in offersSlider">
+                    <div>
+                        <div class="box-logo">
+                            <img class="image-logo-oferta" title="Nome do anunciante" src="../../src/images/{{offer.company.name}}/offers/{{offer.image}}"/>
+                        </div>
+                        <div class="box-text">
+                            <h3>
+                            {{offer.description}}
+                        </h3>
+                            <hr>
+                            <button ng-click="getCoupon(offer)" class="bt-get-offer">
+                                <icon class="icon-twitter"></icon>Obter cupon
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </slick>
+        </div>
+    </div>
+</div>

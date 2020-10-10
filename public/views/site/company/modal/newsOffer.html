@@ -1,0 +1,58 @@
+<div class="modal-coupon">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <center><h4 class="modal-title">Registrar Oferta</h4><center>
+    </div>
+    <div aria-label="Toggle ngShow">
+        <form name="form" class="modal-form" enctype="multipart/form-data">
+            <div>
+                <div class="offer-form-left">
+                    <div class="offer-logo" flow-init="{singleFile: true}" flow-name="uploader.flow" flow-files-added="processFiles($files)">
+                        <div  flow-btn>
+                            <img ng-show="!$flow.files.length" src="src/image/logo-icon.jpg">
+                            <div ng-repeat="image in uploader.flow.files track by $index">
+                                <img flow-img="image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-form-right">
+                    <div class="form-group">
+                        <div class="col-md-12">
+                           <input name="name" ng-model="offer.name" type="text" placeholder="Digite Nome da Oferta" class="form-control" pattern="^[A-Za-z0-9 ]{0,127}$" required >
+                           <p ng-show="form.name.$error.pattern" class="mensage-form">Nome invalido!.</p>
+                        </div>
+                    </div><br><br><br>
+                        <div class="form-group col-md-14">
+                            <div class="col-md-6">
+                               <input name="amountOfOffers" ng-model="offer.amountOfOffers" type="text" placeholder="Digite a Quantidade de Cupons" class="form-control" pattern="^[0-9]{0,4}$" ng-maxlength="4" required >
+                               <p ng-show="form.amountOfOffers.$error.maxlength" class="mensage-form">Quantidade de cupons invalida!.</p>
+                               <p ng-show="form.amountOfOffers.$error.pattern" class="mensage-form">Cupom invalido!.</p>
+                            </div>
+                            <div class="col-md-6">
+                               <input name="dateOfExpiration" class="form-control" ng-model="offer.dateOfExpiration" type="date" placeholder="yyyy-MM-dd" min="{{offer.creationDate}}" max="2020-01-01"required >
+                            </div>
+                        </div>
+                </div>
+                <div class="offer-form-bottom">
+                    <div class="form-group col-md-13">
+                        <textarea name="description" class="form-control" rows="5"  id="description" ng-model="offer.description" required>Descrição</textarea>
+                    </div>
+                </div>
+                <div class="offer-form-button">
+                    <div class="form-group col-md-13">
+                        <div class="col-md-6">
+                            <p>
+                                saldo Disponivel R$ {{offer.credit}}
+                            </p>
+                        </div>
+                        <div class="col-md-5">
+                            <button id="back" ng-click="close()" type="button"class="btn btn-primary button-modal">Cancelar</button>
+                            <button id="next" ng-click="save(form, offer)" type="button"class="btn btn-primary button-modal">Confirmar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

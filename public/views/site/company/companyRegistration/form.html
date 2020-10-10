@@ -1,0 +1,58 @@
+<div>
+    <div class="contract">
+        <center>
+            <legend>Informações de Básicas</legend>
+        </center>
+        <div flow-init="{singleFile: true}" flow-name="uploader.flow" flow-files-added="processFiles($files)">
+            <div class="form-image" flow-btn>
+                <img ng-show="!$flow.files.length" src="src/image/logo-icon.jpg">
+                <div ng-repeat="image in uploader.flow.files track by $index">
+                    <img flow-img="image" />
+                </div>
+            </div>
+        </div>
+        <div class="form-basic">
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input name="nameCompany" maxlength="128"ng-model="company.name" type="text" placeholder="Digite o Nome da Empresa" class="form-control" pattern="^[A-Za-z0-9 ãõçáéíóú ]{0,127}$" required>
+                </div>
+                <div class="col-md-6">
+                    <input name="username" maxlength="20"ng-model="company.username" type="text" placeholder="Digite Usuário" class="form-control" pattern="^[A-Za-z0-9]{0,127}$" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input id="password" name="password" ng-model="company.password" type="password" placeholder="Digite uma senha" class="form-control input-md" required  ng-minlength="6" ng-maxlength="20">
+                    <p ng-show="myForm.password.$error.minlength" class="mensage-form">Senha muito curta.</p>
+                    <p ng-show="myForm.password.$error.maxlength" class="mensage-form">Senha muito Longa.</p>
+                </div>
+                <div class="col-md-6">
+                    <input id="password_c" name="password_c" ng-model="company.password_c" type="password" class="form-control input-md" placeholder="Confirmar Senha" valid-password-c required>
+                    <p ng-show="!myForm.password_c.$error.required && myForm.password_c.$error.noMatch && myForm.password.$dirty" class="mensage-form" >As senhas não coincidem.</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <select class="form-control" ng-model="company.category" ng-options="category._id as category.name for category in categoryList track by category._id">
+                        <option value="">Selecione uma Categoria </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <textarea name="description" class="form-control" rows="5" id="description" ng-model="company.description" required></textarea>
+        </div>
+    </div>
+</div>
+
+<div class="text-right">
+    <button id="back" ng-click="changeTab(myForm, tabs[0])" type="button" class="btn btn-primary">
+        <i class="fa fa-arrow-circle-left" aria-hidden="true"></i> voltar
+    </button>
+    <button id="next" ng-click="changeTab(myForm, tabs[2])" type="button" class="btn btn-primary">
+        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i> Avançar
+    </button>
+    <button id="cancel" ng-click="cancel()" type="button" class="btn btn-danger">
+        <i class="fa fa-reply-all" aria-hidden="true"></i> Cancelar
+    </button>
+</div>

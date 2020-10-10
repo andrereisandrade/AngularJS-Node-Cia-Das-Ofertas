@@ -1,0 +1,172 @@
+*{outline: none;}
+.background-configuration{max-width: 1200px; height:200px; margin: 0 auto;}
+img{max-width: 100%;}
+html{background: #f1f1f1;}
+
+hr{margin: 0;}
+#ver_mais:focus {outline: none;}
+.img-form-p{max-width: 100px; margin-top: 20px}
+
+.empresa-mi{margin-top: 0; float: left; width: 50%; text-align: right; font-size: 11px; font-weight: bold; color: #C0282D;}
+.btn-more:hover, .btn-more:focus{background-color: #C0282D; border-color: #FFFFFF}
+.logo-mi{margin-left: -15px;}
+.content-mi{padding: 10px 5px;}
+.box-mini-banner{
+	float: left;
+	width: 100%;
+	border: 1px solid rgb(226, 226, 226);
+	margin-bottom: 20px;
+	background-color: white;
+}
+
+.codigo{color: #c0282d; font-size: 30px;}
+
+/* Teaser */
+.teaser-body{background: #C0282D;}
+.teaser{background: #C0282D; color: #F5F500;}
+.teaser hr{background: #F5F500;height: 2px; border: none;}
+.teaser label{width: 70%; color: white; font-size: 18px;position: relative; bottom: -10px;}
+.teaser label span{}
+.teaser .input-email{width: 80%;  padding: 9px;color: gray}
+.teaser .submit{width: 40px; padding: 9px 0; margin-left: -5px; }
+.teaser hr::before{content: url('../images/logo-teaser.png'); position: absolute; margin-left: 10%;margin-top: -29px;}
+.alinha-teaser{max-width: 600px; margin: 0 auto;text-align: center; position: relative;z-index: 10;}
+.chamada{font-size: 35px}
+.teaser .site{font-size: 30px;}
+.teaser .slogan{color: white; font-size: 30px;}
+
+.box-face{float: right; margin-left: 30px; margin-top: 3px;}
+.box-face i{font-size: 35px;}
+.box-categorias{background-color: white; float: left;width: 20%;  border: 1px solid rgb(213, 213, 213);padding: 20px; height: 500px}
+.box-categorias ul{padding-left: 0;}
+.box-categorias ul li{list-style: none; text-align: center; margin-top: 10px;}
+.box-categorias ul li a{font-size: 18px;color: #777; }
+.box-categorias form input{width: 70%;background: rgb(240, 240, 240); border: 1px solid #ccc;
+	border-radius: 0px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	padding: 3px;
+	padding-left: 7px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+input{border: 1px solid transparent;}
+.form-control{height: 27px;}
+.btn-default{padding: 3px 10px; margin-top: 6px;}
+
+
+.top-dez{float: left;width: 80%;}
+.top-dez .item{width: 100%;}
+.top-dez .ex1{background: gray;}
+
+.newsletter{float: left;width: 100%; margin-top: 50px;}
+.newsletter form{float: left; width: 50%;text-align: center;}
+.newsletter form input[type=email]{width: 70%;background: rgb(240, 240, 240); border: 1px solid #ccc;
+	border-radius: 2px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	padding: 3px;
+	padding-left: 7px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+#owl-demo .owl-item img{
+	display: block;
+	width: 100%;
+	height: auto;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.newsletter form input[type=email]:focus{-webkit-box-shadow: 0 0 5px 0 #F5F500;
+	box-shadow: 0 0 5px 0 #F5F500;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.logo-company{
+    margin-top: 30px;
+}
+
+.box-b-central{width: 100%; float: left;}
+.newsletter form input[type=submit]{background: #C0282D;border: 1px solid #C0282D; padding: 3px; color: #F5F500; width: 100px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.newsletter form button[type=submit]{background: #C0282D;border: 1px solid #C0282D; padding: 3px; color: #F5F500; width: 100px;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.newsletter form input[type=submit]:hover{border: 1px solid  #F5F500;color: #C0282D; background: #F5F500;font-weight: bold;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.newsletter form button[type=submit]:hover{border: 1px solid  #F5F500;color: #C0282D; background: #F5F500;font-weight: bold;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.submit{background: #F5F500;border: none; padding: 3px; color: #C0282D; width: 100px; font-weight: bold;
+	border: 1px solid transparent;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.submit:hover{border: 1px solid #F5F500;color: #F5F500; background: #C0282D;font-weight: bold;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.banner-oferta{width: 60%;}
+.descr-oferta{padding: 20px; float: left; max-width: 400px;}
+.descr-oferta div.info-empresa{ margin-bottom: 30px;}
+.descr-oferta div.info-empresa p{ margin-bottom: 0px;}
+.descr-oferta form {margin-top: 10px;}
+
+
+
+
+.cont-empresa{ background-color: #F1F1F1;float: left;width: 100%;}
+.cont-empresa #banner-main-empresa .item{width: 100%; height: 150px;}
+.cont-empresa #banner-main-empresa .ex1{background: gray;}
+.cont-empresa #banner-main-empresa .ex2{background: #ccc;}
+.cont-empresa .outras-ofertas{float: left; width: 100%;  background-color: white; padding-bottom: 20px;}
+.cont-empresa .outras-ofertas .oferta{width: 100%; height: 300px; border: 1px solid rgb(194, 194, 194);}
+.cont-empresa .outras-ofertas .col-md-3{margin-top: 30px;}
+.cont-empresa .info-empresa{}
+.info-empresa span{font-weight: bold;}
+.cont-empresa .info-empresa .col-md-3{margin-top: 20px; margin-bottom: 20px;}
+
+.cont-empresa .info-empresa{ border-bottom: 1px solid #BFBFBF;	background-color: white; 	border-top: 1px solid #BFBFBF;	clear: both; }

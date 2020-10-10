@@ -1,0 +1,23 @@
+<div class="main-content">
+    <div class="max-container">
+        <div class="box-empresa">
+            <div ng-repeat="company in companies">
+                <div class="col-md-2">
+                    <center>
+                        <div class="logo-company">
+                        <a ui-sref="site.advertiserPage({id: company._id, companyName: company.name})">
+                                <img ng-if="company.image" src="../../src/images/{{company.name}}/{{company.image}}" />
+                                <img ng-if="!company.image" src="../../src/image/company-icon.png" />
+                            </a>
+                        </div>
+                        <div class="icons-company">
+                            <a href="http://{{company.site}}" target="_blank"><img class="icon" src="src/image/icon-site.png" alt="" /></a>
+                            <a ng-click="location(company)" target="_blank"><img class="icon" src="src/image/icon-maps.png" alt="" /></a>
+                            <a href="https://{{company.facebook}}" target="_blank"><img class="icon" src="src/image/facebook.jpg" alt="" /></a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div>
+    <div class="contract">
+        <center>
+            <legend>Mensagens</legend>
+        </center>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <th><input type="checkbox" name="checkall" ng-click="checkAll()"></th>
+                    <th>Nome</th>
+                    <th>Mensagens</th>
+                    <th>Data</th>
+                </tr>
+                <tr ng-repeat="message in messages">
+                    <td><input type="checkbox" name="name" value=""></td>
+                    <td>{{message.name}}</td>
+                    <td>{{message.message}}</td>
+                    <td>{{message.date}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

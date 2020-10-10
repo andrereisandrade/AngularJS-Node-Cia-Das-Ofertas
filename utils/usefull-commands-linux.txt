@@ -1,0 +1,6 @@
+ps -ef              To list all the tasks running on backgorund
+kill <id>           To kill a running task
+pwd                 To inform where are you on the folder structure
+sudo node test.js & To run on background 
+
+./mongod --auth --port 27017 --dbpath /data/db1

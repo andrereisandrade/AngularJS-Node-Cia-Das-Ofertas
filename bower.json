@@ -1,0 +1,40 @@
+{
+  "name": "ciadasofertas",
+  "description": "Site de Oferta",
+  "main": "node-server.js",
+  "authors": [
+    "Andre Andrade <andreandrade@inatel.br>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.3",
+    "angular-animate": "1.5.3",
+    "angular-modal-service": "~0.6.9",
+    "angular-resource": "1.3",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.1.4",
+    "angular-slick": "^0.2.1",
+    "angular-ui-router": "^0.2.18",
+    "angular-jwt": "^0.0.9",
+    "ng-dialog": "^1.4.0",
+    "angular-local-storage": "^0.2.7",
+    "ng-flow": "~2",
+    "angular-toastr": "^1.7.0",
+    "angular-bootstrap": "1.3.3",
+    "angular-route": "^1.5.7",
+    "angular-daterangepicker": "^0.2.2",
+    "angular-facebook": "^0.2.3",
+    "ngMask": "angular-mask#^3.1.1",
+    "a0-angular-storage": "^0.0.15"
+  }
+}

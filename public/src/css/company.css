@@ -1,0 +1,87 @@
+.box-empresa img {
+    height: 140px;
+    border-radius: 5px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid white;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.box-empresa img:hover {
+    border: 1px solid #DE7D61;
+}
+
+.credit-value{
+    color: #32529b;
+    font-size: 22px;
+    border-radius: 20px;
+    max-width: 134px;
+    border: 1px solid #32529b;
+}
+
+.box-packges-credit {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #d4d4d4;
+}
+
+.box-empresa .icons-company {
+    margin: 5%;
+    width: 90%;
+    height: 50px;
+}
+
+.icons-company .icon {
+    width: 15%;
+    height: 20px;
+    margin: 2%;
+}
+
+.detail-company-mother {
+    width: 70%;
+    padding-top: 20px;
+    margin: 0 auto;
+    float: none;
+}
+
+@media (max-width: 600px) {
+    .detail-company-top {
+        width: 100%;
+        height: auto;
+        margin-top: 13px;
+    }
+}
+
+.detail-company-mother > .detail-company-top {
+    background: white;
+    text-align: justify;
+    margin: 3%;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 10px;
+    float: left;
+    border: 1px solid white;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.detail-company-mother > .detail-company-top > div {
+    margin-top: 3%;
+}
+
+.detail-company-mother > .detail-company-left {
+    float: left;
+    margin: 2%;
+    width: 35%;
+}
+
+.detail-company-mother > .detail-company-right {
+    float: right;
+    margin: 2%;
+    width: 35%;
+    text-align: left;
+}

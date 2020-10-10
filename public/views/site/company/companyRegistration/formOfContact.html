@@ -1,0 +1,75 @@
+<div>
+    <div class="contract">
+        <fieldset>
+            <center>
+                <legend>Informações de Contato</legend>
+            </center>
+            <div class="form-group">
+                <div class="col-md-9">
+                    <input id="street" name="street" ng-model="company.street" type="text" placeholder="Digite Rua ou Avenida" class="form-control input-md" required>
+                </div>
+                <div class="col-md-3">
+                    <input id="street" ng-model="company.number" type="text" placeholder="Numero" class="form-control input-md" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input id="neighborhood" ng-model="company.neighborhood" type="text" placeholder="Bairro" class="form-control input-md" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <select class="form-control" ng-model="company.state" ng-options="state._id as state.name for state in states track by state._id" ng-change="searchCity(company.state)">
+                        <option value="">Selecione um Estado </option>
+                    </select>
+                </div>
+                <div class="col-md-9">
+                    <select ng-disabled='!company.state' class="form-control" ng-model="company.city" ng-options="city.name as city.name for city in cities track by city.name">
+                        <option value="">Selecione uma Cidade </option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">http://</span>
+                        <input id="site" ng-model="company.site" type="site" placeholder="Site" class="form-control input-md" required>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <input id="email" ng-model="company.email" type="email" placeholder="E-Mail" class="form-control input-md" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">https://</span>
+                        <input id="facebook" ng-model="company.facebook" type="text" placeholder="Facebook" class="form-control input-md" required=>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-6">
+                    <input id="celPhone" type="text" placeholder="Celular" ng-model="company.celPhone" class="form-control input-md" mask="(99) 99999-9999" clean="true" required>
+                </div>
+                <div class="col-md-6">
+                    <input id="phoneNumber" ng-model="company.phoneNumber" type="text" placeholder="Telefone Fixo: " class="form-control input-md" mask="(99) 9999-9999" clean="true" required>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+<div class="text-right">
+    <button id="back" ng-click="changeTab(myForm, tabs[1])" type="button" class="btn btn-primary"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> voltar</button>
+    <button id="conclude" ng-click="submit(myForm, company)" type="button" class="btn btn-primary">
+        <i class="fa fa-floppy-o" aria-hidden="true"></i> Concluir
+    </button>
+    <button id="cancel" ng-click="cancel()" type="button" class="btn btn-danger">
+        <i class="fa fa-reply-all" aria-hidden="true"></i> Cancelar
+    </button>
+</div>

@@ -1,0 +1,21 @@
+<div>
+    <div class="contract">
+        <fieldset>
+            <center>
+                <legend>Duvidas e Reclamações</legend>
+            </center>
+            <div class="form-group">
+                <div class="col-md-9">
+                    <textarea class="form-control" rows="5"  id="description" ng-model="message" required></textarea>
+                </div>
+            </div>
+        </fieldset><br>
+        <button id="back" ng-click="sendMessage(message)" type="button" class="btn btn-primary">Enviar</button>
+    </div>
+</div>
+
+<div class="text-right">
+      <button id="back" ng-click="changeTab(tabs[1])" type="button" class="btn btn-primary">voltar</button>
+      <button id="next" ng-click="changeTab(tabs[3])" type="button" class="btn btn-primary">Avançar</button>
+      <button id="cancel" ng-click="cancel()" type="button" class="btn btn-primary">Cancelar</button>
+</div>

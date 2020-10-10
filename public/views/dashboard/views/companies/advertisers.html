@@ -1,0 +1,32 @@
+<div>
+    <div class="contract">
+        <center>
+            <legend>Usuários</legend>
+        </center>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <th>Logo</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Cidade</th>
+                    <th> </th>
+                </tr>
+                <tr  ng-repeat="advertiser in advertisers">
+                    <td><img class="image-offers" src="../../src/images/{{advertiser.name}}/{{advertiser.image}}"></td>
+                    <td>{{advertiser.name}}</td>
+                    <td>{{advertiser.category.name}}</td>
+                    <td>{{advertiser.city}}</td>
+                    <td>
+                        <a id="clone" >
+                            <span ng-click="detail(user)" class="glyphicon glyphicon-duplicate" aria-hidden="true"></span>
+                        </a>
+                        <a id="delete" >
+                            <span ng-click="delete(advertiser._id)" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

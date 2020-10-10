@@ -1,0 +1,56 @@
+<div class="box-offer">
+    <div>
+        <icon class="icon-offer"></icon>
+        <h2>Aqui você encontra os melhores cupons de desconto!</h2>
+    </div>
+    <button class="bt-green">+ Ofertas</button>
+    <div class="container">
+        <div  class="col-md-6 myclass" ng-repeat="offer in offers | limitTo:limit">
+            <div class="row custom-card">
+                <div class="">
+                    <div class="col-md-10">
+                        <a ui-sref="site.advertiserPage({id: offer.company._id, companyName: offer.company.name})">
+                            <h1 class="title-company">{{offer.company.name}}</h1>
+                        </a>
+                    </div>
+                    <div class="">
+                        <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <button class="bt-betais-offer" ng-click="detail(offer)">
+                        <img class="custom-card-logo" src="../../src/images/{{offer.company.name}}/offers/{{offer.image}}">
+                    </button>
+                </div>
+                <div class="col-md-9">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h4>{{offer.name  | cutString:70}}</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p class="discount">{{offer.description | cutString:70}}</p>
+                        </div>
+                        <div class="col-md-4">
+                            <button ng-click="getCoupon(offer)" class="bt-get-offer">
+                                <icon></icon> Obter oferta
+                            </button>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="icon-facebook">
+                                <a href="#">
+                                    <img src="src/image/facebook.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div ng-if="offers.length > 10 && limit < offers.length" class="container cont-bt-more-offer">
+            <button ng-click="getMoreOffers()" class="bt-more-offers">
+                <i class="fa fa-arrow-down"></i> Mais ofertas</button>
+        </div>
+    </div>

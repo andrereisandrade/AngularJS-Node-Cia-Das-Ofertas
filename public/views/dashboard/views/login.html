@@ -1,0 +1,21 @@
+<header ng-controller="MenuController"  ng-include="'views/site/include/nav.html'" role="carousel"></header>
+<center>
+    <div class="main-content">
+        <div class="container">
+            <div class="wrapper">
+                <form class="form-signin">
+                    <h2 class="form-signin-heading">Administrador</h2>
+                    <input type="text" class="form-control" name="username" ng-model="user.username" placeholder="Nome de Usuário" required="" autofocus="" />
+                    <br/>
+                    <input type="password" class="form-control" name="password" ng-model="user.password" placeholder="Password" required="" />
+                    <label class="checkbox">
+                        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> salvar senha
+                    </label>
+                    <button class="btn btn-lg btn-primary btn-block" ng-click="login(user)" type="submit">Login</button>
+                    <br>
+                </form>
+            </div>
+        </div>
+    </div>
+</center>
+<footer class="site-footer"  ng-include="'views/site/include/footer.html'" role="carousel"></footer>

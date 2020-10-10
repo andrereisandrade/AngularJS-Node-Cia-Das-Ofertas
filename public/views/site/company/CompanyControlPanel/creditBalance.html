@@ -1,0 +1,74 @@
+<div>
+    <div class="form-group">
+        <div class="contract">
+            <center>
+                <legend>Controle Financeiro</legend>
+                <br>
+                <div class="form-credit-balance">
+                    <div class="col-md-12">
+                        <h1 class="col-md-4"> Créditos </h1>
+                        <div class="col-md-4"><p class="credit-value">R$ {{company.credit}}</p></div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="col-md-12">
+                        <p class="bg-info">
+                            Através dos créditos você consegue criar ofertas para ser disponibilizada para seus clientes.
+                        </p>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="box-packges-credit">
+            <p>Adiquirir R$ 10,00 de créditos</p>
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+            <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <input type="hidden" name="itemCode" value="8F399F828E8E4ACBB490AF8C2D8AA79F" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+            </form>
+            <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+            <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box-packges-credit">
+            <p>Adiquirir R$ 30,00 de créditos</p>
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+            <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <input type="hidden" name="itemCode" value="8F399F828E8E4ACBB490AF8C2D8AA79F" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+            </form>
+            <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+            <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box-packges-credit">
+            <p>Adiquirir R$ 50,00 de créditos</p>
+            <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+            <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                <input type="hidden" name="itemCode" value="8F399F828E8E4ACBB490AF8C2D8AA79F" />
+                <input type="hidden" name="iot" value="button" />
+                <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+            </form>
+            <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+            <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+        </div>
+    </div>
+</div>
+<div class="text-right">
+    <button id="conclude" ng-click="addCredit()" type="button" class="btn btn-primary">Adquirir Credito</button>
+    <button id="back" ng-click="changeTab(tabs[2])" type="button" class="btn btn-primary">voltar</button>
+    <button id="cancel" ng-click="changeTab(tabs[4])" type="button" class="btn btn-primary">Avançar</button>
+</div>

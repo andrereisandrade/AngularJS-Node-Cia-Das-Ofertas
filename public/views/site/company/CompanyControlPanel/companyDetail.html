@@ -1,0 +1,109 @@
+<form name="myForm" enctype="multipart/form-data" class="form-horizontal" action="" role="form" novalidate>
+    <div>
+        <div class="form-group">
+            <div class="contract">
+                <div class="company-detail">
+                    <div class="company-detail-top">
+                        <div class="company-logo" flow-init="{singleFile: true}" flow-name="uploader.flow" flow-files-added="processFiles($files)">
+                            <div flow-btn>
+                                <img src="../../src/images/{{company.name}}/{{company.image}}">
+                                <div ng-repeat="image in uploader.flow.files track by $index">
+                                    <img flow-img="image" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="company-description">
+                            <center>
+                                <legend>{{company.name}}</legend>
+                            </center>
+                            <div class="form-group">
+                                <textarea ng-show="updateChecked" class="form-control" rows="5"  id="description" ng-model="company.description" required></textarea>
+                            </div>
+                            <p ng-hide="updateChecked"> Descriçao: {{company.description}}</p>
+                        </div>
+                    </div>
+
+                    <div class="company-detail-bottom-left">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <p ng-hide="updateChecked">Catetoria: {{company.category.name}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input ng-show="updateChecked" name="street" ng-model="company.street" type="text" placeholder="Digite a Rua ou Avenida" class="form-control" required >
+                                <p ng-hide="updateChecked">  Logradouro: {{company.street}} </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input ng-show="updateChecked" name="neighborhood" ng-model="company.neighborhood" type="text" placeholder="Digite o Bairro" class="form-control" required >
+                                <p ng-hide="updateChecked">Bairro: {{company.neighborhood}} </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input ng-show="updateChecked" name="cellPhone" ng-model="company.cellPhone" type="text" mask="(99) 99999-9999" placeholder="Digite o Telefone Celular" class="form-control" required >
+                                <p ng-hide="updateChecked">Celular: {{company.cellPhone}} </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input ng-show="updateChecked" name="email" ng-model="company.email" type="text" placeholder="Digite o E-mail" class="form-control" required >
+                                <p ng-hide="updateChecked">E-mail: {{company.email}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <input ng-show="updateChecked" name="site" ng-model="company.facebook" type="text" placeholder="Digite o Facebook" class="form-control" required >
+                                <p ng-hide="updateChecked"> Facebook: <a style="color: #337ab7" target="blank" href="https://{{company.facebook}}">{{company.facebook}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="company-detail-bottom-right">
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input ng-show="updateChecked" name="number" ng-model="company.number" type="text" placeholder="Digite o Numero" class="form-control" required >
+                                <p ng-hide="updateChecked"> Numero: {{company.number}} </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <select ng-show="updateChecked" class="form-control" ng-model="company.city" ng-options="city.name as city.name for city in cities track by city.name">
+                                    <option value="">Selecione uma Cidade </option>
+                                </select>
+                                <p ng-hide="updateChecked">Cidade: {{company.city}} </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <select ng-show="updateChecked" class="form-control" ng-model="company.state" ng-options="state._id as state.name for state in states track by state._id" ng-change="searchCity(company.state)">
+                                    <option value="">Selecione um Estado </option>
+                                </select>
+                                <p ng-hide="updateChecked">Estado:{{company.state.name}} - {{company.state.acronyms}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input ng-show="updateChecked" name="phoneNumber" ng-model="company.phoneNumber" type="text" mask="(99) 9999-9999" placeholder="Digite o Telefone" class="form-control" required >
+                                <p ng-hide="updateChecked">Telefone: {{company.phoneNumber}}</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <input ng-show="updateChecked" name="site" ng-model="company.site" type="text" placeholder="Digite o Nome do Site" class="form-control" required >
+                                <p ng-hide="updateChecked">Site: <a style="color: #337ab7" target="blank" href="http://{{company.site}}">{{company.site}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-right">
+        <button id="save" ng-show="updateChecked"ng-click="submit(myForm, company)" type="button" class="btn btn-primary">Salvar</button>
+        <button id="edit" ng-hide="updateChecked" ng-click="edit()" type="button" class="btn btn-primary">Editar</button>
+        <button id="cancel" ng-show="updateChecked"ng-click="cancel()" type="button" class="btn btn-primary">Cancelar</button>
+    </div>
+</form>

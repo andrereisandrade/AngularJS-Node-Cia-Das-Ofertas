@@ -1,0 +1,12 @@
+<div class="box-carousel">
+    <div class="carousel">
+        <slick infinite="true" ng-if="carouselContent"  slides-to-show="8" slides-to-scroll="5" responsive="configCarousel">
+            <div class="carousel-item" ng-repeat="company in carouselContent | limitTo:20">
+                <a ui-sref="site.advertiserPage({id: company._id, companyName: company.name})">
+                    <img title="{{company.name}}" src="../../src/images/{{company.name}}/{{company.image}}"/>
+                </a>
+            </div>
+        </slick>
+    </div>
+</div>
+

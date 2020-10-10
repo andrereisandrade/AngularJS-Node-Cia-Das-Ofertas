@@ -1,0 +1,21 @@
+<div class="contentTitle">
+    <h1>Cadastro do Anunciante</h1>
+</div>
+<div class="sidebar col-md-3">
+    <h5>
+        <span class="glyphicon glyphicon-edit"></span>
+        <label for="">Passos</label>
+    </h5>
+    <div class="list-group">
+        <a ng-click="changeTab(myForm, tab)" class="list-group-item" ng-repeat="tab in tabs" ng-class="{'menuActive': tab.id==currentTab.id}">
+            {{$index+1}}. <span>{{tab.name}}</span>
+        </a>
+    </div>
+</div>
+<div class="content col-md-9">
+    <div class="formBorder" id="formTabs">
+        <form name="myForm" enctype="multipart/form-data" class="form-horizontal" action="" role="form" novalidate>
+            <div ng-include="currentTab.templateUrl"></div>
+        </form>
+    </div>
+</div>

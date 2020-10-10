@@ -1,0 +1,20 @@
+    <div class="container">
+		<table class="table">
+			<thead>
+				<tr>
+					<th> Name</th>
+					<th> Email</th>
+					<th> Data</th>
+					<th> Deletar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contact in contactList">					
+					<td>{{contact.fullname}}</td>
+					<td>{{contact.email}}</td>
+					<td>{{contact.password}}</td>
+					<td><button class="btn btn-danger" button ng-click="remove(contact._id)">Deletar</button></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>

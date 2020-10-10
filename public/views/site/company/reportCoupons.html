@@ -1,0 +1,27 @@
+<div class="container content max-container">
+    <div class="jumbotron">
+        <br>
+        <br>
+        <h2 class="text-center">Lista de Cupons Gerado</h2>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <th>Cupom</th>
+                    <th>E-MAIL</th>
+                    <th>Data</th>
+                    <th>Estado</th>
+                    <th>Confirmar</th>
+                </tr>
+                <tr ng-style="set_color(report.utilized)" ng-repeat="report in companyList | filter:filtro ">
+                    <td>{{report.coupon}}</td>
+                    <td>{{report.email}}</td>
+                    <td>{{report.date}}</td>
+                    <td>{{report.utilized}}</td>
+                    <td ng-show="true">
+                        <button type="button" ng-click="validate(report)" class="btn btn-primary"> Confirmar</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

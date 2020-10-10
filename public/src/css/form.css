@@ -1,0 +1,244 @@
+/********* company Control Painel  ************/
+
+/*-------- detail company  ------- */
+.company-detail {
+    width: 100% !important;
+    height: 100% !important;
+}
+.company-detail-top {
+    width: 100% !important;
+    height: 200px !important;
+}
+.company-detail-top > .company-logo{
+    float: left;
+    width: 25% !important;
+    height: 100% !important;
+    margin-left:5%;
+}
+.company-detail-top img {
+    max-width:85%;
+    max-height:85%;
+    width: auto;
+    height: auto;
+}
+.company-detail-top > .company-description{
+    float: right;
+    width: 55% !important;
+    margin-right:15%;
+    text-align: justify;
+}
+.company-detail-bottom-left {
+    width: 40% !important;;
+    margin-left:5%;
+    float: left;
+}
+.company-detail-bottom-right {
+    width: 40% !important;
+    float: right;
+    margin-right:10%;
+}
+
+/*-------- report coupons  ------- */
+
+.image-offers {
+    max-width:30%;
+    max-height:30%;
+    width: auto;
+    height: auto;
+}
+
+/*-------- creidt balance  ------- */
+.form-credit-balance{
+    float: right;
+    width: 95%;
+    height: 180px;
+    border: red;
+}
+/* ------ Login ----- */
+.wrapper {
+    margin: 100px;
+    width: 500px;
+    background: #fff;
+    border: 1px solid #CCC;
+}
+
+.form-signin {
+    margin: 50px;
+}
+
+/*------ Formulario update --------*/
+
+#image {
+    width: 250px;
+    height: 180px;
+    float: left;
+    margin: "30px";
+}
+
+.myform {
+    width: 400px;
+    height: 400px;
+    margin-left: 20px;
+    margin-top: 30px;
+    background-size: 100%;
+    margin-right: 20px;
+    background: #F8F8FF;
+}
+
+#alinhacentro {
+    margin: 30px;
+}
+
+#nameCompany {
+    float: right;
+    margin-right: 20px;
+    width: 650px;
+    height: 150px;
+    border: red;
+}
+
+#form-image-update {
+    background: url(../image/logo_hospital.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 250px;
+    height: 180px;
+    cursor: pointer;
+    margin-left: 30px;
+    float: left;
+}
+
+#file {
+    background: red;
+    position: absolute;
+    opacity: 0;
+    height: 180px;
+    width: 250px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#upload {
+    width: 190px;
+    height: 20px;
+}
+
+/*------ Formulario save --------*/
+
+.contentTitle{
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contentTitle > h1{
+    font-weight: bold;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.formBorder {
+    background-color: #fff;
+    float: right;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.sidebar {
+    /*height: calc(100% - 146px);*/
+    width: 250px;
+    position: absolute;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+.sidebar > h5,
+.sidebar .list-group-item {
+    padding: 15px 0 15px 40px !important;
+    cursor: pointer;
+}
+.sidebar > h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.sidebar > h5,
+a.active,
+tr.active > td,
+a.list-group-item:hover {background-color: #dae3e9 !important}
+
+/* ------------ Contract ----------------*/
+.contract {
+    margin: auto;
+    width: 95%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.contract .form-group{
+    margin-bottom: 15px;
+}
+.contract > h1 {
+    text-align: center;
+    font-weight: bold;
+
+}
+.scroll{
+    position: relative;
+    overflow-y: scroll;
+    height: 400px !important;
+    padding: 20px;
+    text-align: justify;
+}
+
+/* --------- Form Basic --------------------*/
+.form-basic {
+    float: right;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 75%;
+    height: 180px;
+    border: red;
+}
+
+.form-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20%;
+    height: 150px;
+    cursor: pointer;
+    margin-top: 25px;
+    float: left;
+}
+
+.form-control{
+    height: 35px !important
+}
+
+#description {
+    height: 120px !important;
+}
+#form-complete {
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 50px;
+}
+
+/* ------------ Mensage --------------*/
+
+.mensage-form {
+    color:red;
+}
+/* ------------ Buttons --------------*/
+.text-right{
+    padding-right: 20px;
+    padding-bottom: 10px;
+    margin: 3%;
+}
+
+.text-right >label {
+    width:30%;
+    float: left;
+}
+
+.text-right >label > span {
+    margin-right:3%;
+}

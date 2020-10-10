@@ -1,0 +1,185 @@
+/* --------------- create and update coupon ------------*/
+.modal-getCoupon {
+    width: 90%;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.modal-getCoupon-header{
+    text-align: center;
+    margin-right: 2%;
+    padding: 5px;
+}
+
+.modal-getCoupon-form {
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.modal-getCoupon-form .icon-facebook , .icon-google-plus{
+    max-width: 25px;
+}
+.modal-getCoupon-form .button{
+    text-align: center;;
+    border-radius: 10px!important;
+    padding-top: 15%;
+}
+
+
+
+
+/* --------------- create and update coupon ------------*/
+
+.modal-coupon {
+    width: 100%;
+    height: 600px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.modal-header{
+    margin-right: 2%;
+    padding: 5px;
+}
+
+.modal-form {
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.modal-form > div {
+    width: 90% !important;
+}
+
+.modal-form > div .offer-form-left{
+    float: left;
+    width: 22% !important;
+    height: 150px;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+.modal-form > div .offer-form-left > .offer-logo{
+    max-width:100%;
+    max-height:100%;
+    margin-top: 15%;
+    width: auto;
+}
+
+.modal-form > div .offer-form-right{
+    float: right;
+    width: 57% !important;
+    height: 150px;
+    margin-right: 10%;
+    margin-top: 4%;
+    margin-left: 2%;
+}
+
+.modal-form> div .offer-form-bottom {
+    width: 90% !important;
+}
+
+.modal-form> div .offer-form-button {
+   margin-top: 50px;
+}
+.button-modal {
+  float: right;
+}
+/* -----------------  Report of coupons ----------*/
+.modal-report-coupon {
+    width: 100%;
+    height: 700px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.jumbotron {
+    padding-top: 10px;
+    margin-right: 5%;
+}
+.jumbotron .table{
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.alertPop, .confirmPop {
+    color: #666 !important;
+}
+.message {
+    text-align: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0 -16px;
+}
+.message p {
+    padding: 20px 0;
+}
+.buttons {
+    text-align: right;
+    padding-top: 12px;
+}
+
+/* -----------------  buy credit ---------- */
+
+.modal-credit{
+    width:500px !important;
+    height: 200px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+.modal-credit > .modal-form{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+.modal-credit > .modal-title{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.modal-credit > .buttons {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+/* ----------------- Detail offer ---------- */
+
+.modal-detail-offer .modal-body{
+    height: 350px !important;
+}
+.modal-detail-offer .modal-body .image{
+    text-align: center;
+    max-width: 600px;
+    max-height: 600px;
+    height: 60%;
+}
+.modal-detail-offer .modal-body .information{
+    margin: 5%;
+}
+.modal-detail-offer .modal-footer{
+    text-align:right;
+}
+
+/* -------------- Location Company -----------*/
+.location-company{
+    text-align: center;
+    margin: 2%;
+}
+
+.modal-location-company .modal-footer{
+    text-align:right;
+    width: 900px;
+    height: 600px;
+}
+
+.angular-google-map-container {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.angular-google-map{
+    padding: 15px;
+    margin-top: 10px;
+}

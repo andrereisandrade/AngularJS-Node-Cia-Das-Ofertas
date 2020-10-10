@@ -1,0 +1,72 @@
+<div class="modal-getCoupon">
+    <div class="modal-getCoupon-header">
+        <button type="button" class="close" ng-click="close(false)" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Cupom de desconto</h4>
+    </div>
+    <div class="modal-body" aria-label="Toggle ngShow">
+        <center ng-if="!checked">
+            <p>Você pode rapidamente se cadastrar com o Facebook para obter este cupom.</p>
+        </center>
+        <form ng-if="!checked" checked class="modal-getCoupon-form" ng-submit="Submit()" enctype="multipart/form-data">
+            <!--
+            <center>
+                <div class="col-md-6">
+                    <input type="username" ng-model="user.username" id="username" placeholder="Nome de Usuário" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="password" ng-model="user.password" id="password" placeholder="Senha" class="form-control" required></input>
+                </div>
+            </center>
+-->
+            <!--
+            <div class="form-group">
+                <div class="button">
+                    <button type="button" class="btn btn-primary" ng-click="login(user)">Confirmar</button>
+                    <button type="button" class="btn btn-danger" ng-click="close(false)">Cancelar</button>
+                </div>
+            </div>
+-->
+            <div class="form-group">
+                <center>
+                    <button type="button" class="btn btn-primary bt-custom-facebook" ng-click="loginFacebook()">
+                        <i class="fa fa-facebook-official fa-1.5x" aria-hidden="true"></i> Entrar com o Facebook
+                    </button>
+                    <!--
+                    <div class="col-md-1">
+                        <div class="icon-facebook">
+                            <a href="#">
+                                <img src="src/image/facebook.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="icon-google-plus">
+                            <a href="#">
+                                <img src="src/image/icon-google-plus.jpg" alt="" />
+                            </a>
+                        </div>
+                    </div>
+-->
+                </center>
+            </div>
+        </form>
+
+        <div ng-if="checked" class="box-cupon-generated">
+            <div class="check-element animate-hide">
+                <div class="row">
+                    <h4>Parabéns {{user.username}} você acaba de receber seu cupon.</h4>
+                    <div class="col-md-12">
+                        <p>Numero do cupon: <div class="number-coupon">{{offer.generationsCoupons.number}}</div></p>
+                        
+                    </div>
+
+
+                </div>
+            </div>
+            <br>
+            <div class="modal-footer">
+                <button type="button" ng-show=checked ng-click="close(false)" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>

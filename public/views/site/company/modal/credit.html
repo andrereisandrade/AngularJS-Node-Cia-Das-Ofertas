@@ -1,0 +1,16 @@
+<div class="modal-credit">
+    <button type="button" class="close" ng-click="close()" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <div class="modal-title">
+        <b>"Digite a quantidade de Credito"</b>
+     </div>
+    <div class="modal-form">
+        <div class="col-md-4">
+            <input name="credit" ng-model="company.creditToAdd" type="text" placeholder="Digite a Quantidade de Credito" class="form-control" pattern="^[0-9]{0,4}$" ng-maxlength="10" required>
+        </div>
+    </div>
+    <br>
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" ng-click="confirm(company)">Confirmar</button>
+        <button type="button" class="btn btn-danger" ng-click="close()">Cancelar</button>
+    </div>
+</div>

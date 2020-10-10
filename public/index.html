@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <base href="/index.html">
+    <title>Cia das Oferta</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Optional theme -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css">
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog.min.css" />
+    <link rel="stylesheet" href="bower_components/ng-dialog/css/ngDialog-theme-default.min.css" />
+<!--    <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css" />-->
+
+    <!-- Css -->
+    <link rel="stylesheet" type="text/css" href="src/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/form.css">
+    <link rel="stylesheet" type="text/css" href="src/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="src/css/modal.css">
+    <link rel="stylesheet" type="text/css" href="src/css/listCompany.css">
+    <link rel="stylesheet" type="text/css" href="src/css/company.css">
+    <link rel="stylesheet" type="text/css" href="src/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="src/css/companyLocation.css"> -->
+
+</head>
+
+<body ng-app="ciaDasOfertaWebApp" class="nav-md">
+
+    <div ui-view></div>
+
+    <!-- Bower -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/ng-flow/dist/ng-flow-standalone.min.js"></script>
+    <script src="bower_components/angular-modal-service/dst/angular-modal-service.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="bower_components/angular-slick/dist/slick.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
+    <!-- <script src="bower_components/angular-storage/dist/angular-storage.min.js"></script> -->
+    <script src="bower_components/ng-dialog/js/ngDialog.min.js"></script>
+    <script src="bower_components/angular-jwt/dist/angular-jwt.js"></script>
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js"></script>
+    <script src="bower_components/angular-facebook/lib/angular-facebook.js"></script>
+    <script src='bower_components/ngMask/dist/ngMask.min.js'></script>
+
+
+
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.3.3.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+<script src="//rawgit.com/angular-ui/angular-google-maps/2.1.5/dist/angular-google-maps.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAd1xMYT1bt99qtFWQEzXiRBvORDWHgPtk&libraries=places" ></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.5.0/lodash.min.js"></script>
+    <!-- Controllers -->
+    <script src="src/js/app.js"></script>
+    <script src="src/js/config/routes.js"></script>
+    <script src="src/js/config/interceptor.js"></script>
+    <script src="src/js/controllers/menu.js"></script>
+    <script src="src/js/controllers/home.js"></script>
+    <script src="src/js/controllers/companyLogin.js"></script>
+    <script src="src/js/controllers/companyDetail.js"></script>
+    <script src="src/js/controllers/companyForm.js"></script>
+    <script src="src/js/controllers/company.js"></script>
+    <script src="src/js/controllers/contact.js"></script>
+    <script src="src/js/controllers/offers.js"></script>
+    <script src="src/js/controllers/companyControl.js"></script>
+
+    <!-- Controllers Modals -->
+    <script src="src/js/controllers/modal/getCoupon.js"></script>
+    <script src="src/js/controllers/modal/newsOffer.js"></script>
+    <script src="src/js/controllers/modal/offerDetail.js"></script>
+    <script src="src/js/controllers/modal/credit.js"></script>
+    <script src="src/js/controllers/modal/reportCoupons.js"></script>
+    <script src="src/js/controllers/modal/companyLocation.js"></script>
+
+    <!-- Controller Admin -->
+    <script src="src/js/controllers/admin/adminLogin.js"></script>
+    <script src="src/js/controllers/admin/users.js"></script>
+    <script src="src/js/controllers/admin/advertisers.js"></script>
+    <script src="src/js/controllers/admin/messagesUsers.js"></script>
+    <script src="src/js/controllers/admin/messagesCompanies.js"></script>
+    <script src="src/js/controllers/admin/menu.js"></script>
+
+
+    <!-- Directives -->
+    <script src="src/js/directives/fileModal.js"></script>
+    <script src="src/js/directives/menuToggle.js"></script>
+    <script src="src/js/directives/sideMenuBar.js"></script>
+    <script src="src/js/directives/passwordVerify.js"></script>
+
+    <!-- Filters -->
+    <script src="src/js/filters/filters.js"></script>
+
+    <!-- Services -->
+    <script src="src/js/services/companyService.js"></script>
+    <script src="src/js/services/companyServiceREST.js"></script>
+    <script src="src/js/services/userService.js"></script>
+    <script src="src/js/services/searchService.js"></script>
+    <script src="src/js/services/offersService.js"></script>
+    <script src="src/js/services/offersServiceREST.js"></script>
+    <script src="src/js/services/authentication.js"></script>
+    <script src="src/js/services/authenticationREST.js"></script>
+    <script src="src/js/services/authInterceptorService.js"></script>
+    <script src="src/js/services/validateCompanyForm.js"></script>
+    <script src="src/js/services/workflow.js"></script>
+    <script src="src/js/services/configurationREST.js"></script>
+    <script src="src/js/services/configurationService.js"></script>
+    <script src="src/js/services/administrator.js"></script>
+    <script src="src/js/services/administratorREST.js"></script>
+    <script src="src/js/services/userServiceREST.js"></script>
+
+
+</body>
+
+</html>

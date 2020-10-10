@@ -1,0 +1,2 @@
+use ciadasofertas
+db.categories.insert([{name: "Alimentação"},{name: "Comércio"},{name: "Loja"},{name: "Lazer"},{name: "Saúde"}])

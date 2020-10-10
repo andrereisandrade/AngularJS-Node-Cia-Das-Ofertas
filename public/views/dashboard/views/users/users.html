@@ -1,0 +1,30 @@
+<div>
+    <div class="contract">
+        <center>
+            <legend>Usuários</legend>
+        </center>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tr>
+                    <th>Nome</th>
+                    <th>email</th>
+                    <th>Cupons Adquirido</th>
+                    <th> </th>
+                </tr>
+                <tr ng-repeat="user in users">
+                    <td>{{user.username}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.coupons}}</td>
+                    <td>
+                        <a id="detail" >
+                            <span ng-click="detailCoupon(user)" class="glyphicon glyphicon-duplicate" aria-hidden="true"></span>
+                        </a>
+                        <a id="delete" >
+                            <span ng-click="deleteadvertiser(user._id)" class="glyphicon glyphicon-trash" aria-hidden="true"></span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

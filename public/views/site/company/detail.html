@@ -1,0 +1,79 @@
+<div class="main-content">
+    <div class="detail-company-mother">
+        <div class="detail-company-top">
+            <div class="col-md-12">
+                <div class="box-empresa">
+                    <div class="col-md-5">
+                        <img ng-if="company.image" src="../../src/images/{{company.name}}/{{company.image}}" />
+                    </div>
+                    <div class="col-md-7">
+                        <h3>{{company.name}}</h3>
+                        <p>{{company.description}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Categoria: {{company.category.name}}</p>
+                <p>Logradouro: {{company.street}}, Numero:{{company.number}}</p>
+                <p>Cidade: {{company.city}}, Estado:{{company.state.name}} - {{company.state.acronyms}}</p>
+                <p>Celular: {{company.cellPhone}} </p>
+                <p>Facebook: <a style="color: #337ab7" target="blank" href="{{company.facebook}}">{{company.facebook}}</a></p>
+            </div>
+            <div class="col-md-6">
+                <p>Bairro: {{company.neighborhood}} </p>
+                <p>Telefone:{{company.phoneNumber}}</p>
+                <p>E-mail: {{company.email}}</p>
+                <p>Site: <a style="color: #337ab7" target="blank" href="{{company.site}}">{{company.site}}</a></p>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-6" ng-repeat="offer in offers">
+                <div class="row custom-card">
+                    <div class="col-md-12">
+                        <div class="col-md-8">
+                            <a ui-sref="site.advertiserPage({id: offer.company._id, companyName: offer.company.name})">
+                                <h1 class="title-company">{{offer.company.name}}</h1>
+                            </a>
+                        </div>
+                        <div class="">
+                            <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <button class="bt-betais-offer" ng-click="detail(offer)">
+                            <img src="../../src/images/{{offer.company.name}}/offers/{{offer.image}}">
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <h4>{{offer.name  | cutString:70}}</h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="discount">{{offer.description | cutString:70}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-buttons">
+                            <div class="btn-coupon">
+                                <button ng-click="getCoupon(offer)" class="bt-get-offer">
+                                    <icon></icon> Obter oferta
+                                </button>
+                            </div>
+                            <div class="btn-facebook">
+                                <div class="icon-facebook">
+                                    <a href="#">
+                                        <img src="src/image/facebook.jpg" alt="" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

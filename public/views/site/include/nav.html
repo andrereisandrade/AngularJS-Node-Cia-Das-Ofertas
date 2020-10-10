@@ -1,0 +1,110 @@
+<script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <img src="../../src/logo/{{match.model.image}}" width="25">
+        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+    </a>
+</script>
+
+<nav class="navbar navbar-default navbar-cia">
+    <div class="container-fluid">
+        <div class="max-container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/"><img title="Logo - Cia das ofertas" src="src/image/logo-responsive.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a ui-sref="site.home">Início</a>
+                    </li>
+                    <li>
+                        <a ui-sref="site.advertiser">Anunciantes</a>
+                    </li>
+                    <li>
+                        <a ui-sref="site.ofertas">Filtrar Ofertas</a>
+                    </li>
+                    <!--li>
+                        <a ui-sref="site.city">Cidades</a>
+                    </li-->
+                    <li>
+                        <a ui-sref="site.contact">Contato</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a ui-sref="site.advertiser.login" class="bt-advertiser-area">
+                            <icon class="icon-advertiser-area"></icon>Área do Anunciante</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div class="sub-header">
+    <div class="max-container">
+        <a href="/">
+            <img class="logo" title="Logo - Cia das ofertas" src="src/image/logo.png">
+        </a>
+        <div class="category-box">
+            <button class="icon-config-bt" type="button">
+                <span class="icon-line-bt"></span>
+                <span class="icon-line-bt"></span>
+                <span class="icon-line-bt"></span>
+            </button>
+            Categorias
+            <div class="sub-category-box">
+                <ul >
+                    <li ng-repeat="category in categories"> <a ui-sref="site.ofertas">{{category.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="searcher">
+
+            <!--            <input type="text" ng-model="customSelected" uib-typeahead="state as state.nameCompany for state in contactList |filter:{nameCompany:$viewValue} | limitTo:10 " typeahead-template-url="customTemplate.html" typeahead-show-hint="true" typeahead-min-length="0">-->
+            <input class="input-text-search" ng-focus="search.focus=true" ng-keyup="getSearch()" type="text" ng-model="search.text">
+            <div class="box-result-search" ng-show="search.focus">
+                <div>
+                    <div ng-repeat="company in search.result | limitTo: 10">
+                        <ul>
+                            <li>
+                                <a ui-sref="site.advertiserPage({id: company._id, companyName: company.name})">
+                                    <img width="40" ng-if="company.image" src="../../src/images/{{company.name}}/{{company.image}}" />
+                                    <span ng-if="company.image">{{company.name}}</span>
+                                    <img width="40" ng-if="!company.image" src="../../src/image/company-icon.png" /> <span ng-if="!company.image">{{company.name}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <button ng-focus="search.focus=true;" class="bt-search" ng-blur=";search.focus=false;" ng-click="getSearch()">
+            <i id="icon-loading" style="display: none;" class="fa fa-spinner fa-pulse"></i>
+            <span id="icon-search" class="glyphicon glyphicon-search"></span>
+        </button>
+
+        <div class="box-social">
+            <a href="#">
+                <icon class="icon-google-plus"></icon>
+            </a>
+            <a href="#">
+                <icon class="icon-twitter"></icon>
+            </a>
+            <a target="_blank" href="https://www.facebook.com/companhiadaoferta/?fref=ts">
+                <icon class="icon-facebook"></icon>
+            </a>
+        </div>
+    </div>
+</div>

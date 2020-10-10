@@ -1,0 +1,81 @@
+<div class="container">
+    <div class="col-md-12">
+        <h1>Ofertas</h1>
+    </div>
+    <div class="col-md-3">
+        <div class="custom-filter">
+            <div class="filter-title"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Categoria</div>
+            <div class="filter-options">
+                <div ng-repeat="category in categories">
+                    <input type="checkbox" ng-click="selectCategory(category._id)"> {{category.name}}
+                </div>
+            </div>
+            <div class="filter-title"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Estados</div>
+            <div class="filter-options">
+                <div ng-repeat="state in states">
+                    <input type="checkbox" ng-click="selectState(state._id)"> {{state.name}} - {{state.acronyms}}
+                </div>
+            </div>
+            <div class="filter-title"> <i class="fa fa-arrow-right" aria-hidden="true"></i> Cidades</div>
+            <div class="filter-options">
+                <div ng-repeat="city in cities">
+                    <input type="checkbox" ng-click="selectCity(city._id)"> {{city.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="col-md-6" ng-repeat="offer in offers">
+            <div class="row custom-card">
+                <div class="col-md-12">
+                    <div class="col-md-8">
+                        <h1 class="title-company">{{offer.company.name}}</h1>
+                    </div>
+                    <div class="">
+                        <uib-rating ng-model="rate" max="max" read-only="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null" titles="['one','two','three']" aria-labelledby="default-rating"></uib-rating>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <a ui-sref="">
+                        <img src="../../src/images/{{offer.company.name}}/offers/{{offer.image}}">
+                    </a>
+                </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4>{{offer.name  | cutString:70}}</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p class="discount">{{offer.description | cutString:70}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-buttons">
+                        <div class="btn-coupon">
+                            <button ng-click="getCoupon(offer._id, offer.name)" class="bt-get-offer">
+                                <icon></icon> Obter oferta
+                            </button>
+                        </div>
+                        <div class="btn-facebook">
+                            <div class="icon-facebook">
+                                <a href="#">
+                                    <img src="src/image/facebook.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{filtrado}}
+
+
+    <div class="container cont-bt-more-offer">
+        <button ng-click="getMoreOffers()" class="bt-more-offers">
+            <i class="fa fa-arrow-down"></i> Mais ofertas</button>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+use admin
+db.createUser({user: "admin" pwd: "asdAD12-cD!", roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]})
+db.auth("admin", "asdAD12-cD!")
+
+use ciadasofertas
+db.createUser(
+   {
+     user: "ciadasofertas",
+     pwd: "fsie-!98j",
+     roles: [ "readWrite", "dbAdmin" ]
+   }
+)
+
+db.auth("ciadasofertas", "fsie-!98j")
+
